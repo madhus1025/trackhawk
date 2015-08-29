@@ -1,0 +1,20 @@
+<?php
+
+	include 'Connector.php';
+	
+	$con=connector();
+
+	$result=mysqli_query($con,"select * from messages where status=1");
+
+	while($row=mysqli_fetch_array($result)){
+
+		echo $row['patroler'].":".$row['message'];
+
+		$id=$row['id'];
+
+		$result1=mysqli_query($con,"update messages set status=0 where id=$id");
+
+	}
+
+
+?>

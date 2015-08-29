@@ -1,0 +1,6 @@
+<?php
+function connector(){
+		$con=mysqli_connect("localhost","root","","hawk");
+		return $con;
+}
+?>

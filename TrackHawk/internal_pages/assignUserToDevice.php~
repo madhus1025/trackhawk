@@ -1,0 +1,58 @@
+<?php
+	include 'Connector.php';
+	
+	session_start();
+	$district=$_SESSION['district'];
+	
+
+	$devicename=$_POST['imei'];
+	$name=$_POST['user'];
+	$phone=$_POST['phone'];
+	$highway=$_POST['ways'];
+	$station=$_POST['station'];
+	if($devicename==""||$name==""||$phone==""){
+		
+		echo  "<script type='text/javascript'>";
+		echo "window.close();";
+		echo "</script>";
+
+	}
+	else{
+
+	$con=connector();
+	$result=mysqli_query($con,"SELECT * FROM devices where name='$devicename'");
+	$row=mysqli_fetch_array($result);
+
+	if($row==null){
+		echo "<script> alert('Please Enroll the Device first'); </script>";
+		header("Location:/internal_pages/DeviceList.php");
+	}
+	$imei=$row['imei'];
+
+	$date=date("Y-m-d");	
+	$result=mysqli_query($con,"select * from deviceholders where imei='$imei' and date='$date'");
+	$row=mysqli_fetch_array($result);
+	if($row==null){
+
+		$result=mysqli_query($con,"insert into deviceholders values('$imei','$name','$phone','$date','$devicename',$highway)");
+		
+	}	
+	else{
+		$result=mysqli_query($con,"update deviceholders set phone='$phone', name='$name' where imei='$imei' and convert(DATE,date)='$date'");
+		
+	}
+		$result=mysqli_query($con,"update devices set status=0 where imei='$imei'");
+		$result=mysqli_query($con,"select deviceid from devices where imei='$imei' and status=1");
+		$row=mysqli_fetch_array($result);
+		if($row!=null){
+
+			$deviceid=$row['deviceid'];
+			$result=mysqli_query($con,"delete from locations");
+		}
+
+	$result=mysqli_query($con,"update devices set currentholder='$name',currentnum='$phone',highway=$highway where imei='$imei'");
+	echo  "<script type='text/javascript'>";
+		echo "window.close();";
+		echo "</script>";
+}
+?>

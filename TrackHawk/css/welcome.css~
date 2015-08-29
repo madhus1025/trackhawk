@@ -1,0 +1,208 @@
+html
+{
+	cursor:pointer;
+	font-family:Segoe UI;
+	font-size:80%;
+
+}
+#head
+{
+	color:white;
+	position:absolute;
+	left:11%;
+	top:0%;
+}
+#amblem
+{
+	position:relative;
+	left:0%;
+	top:0%;
+	width:10%;
+	height:15%;
+}
+#header
+{
+	position:relative;
+	left:0%;
+	top:0%;
+	background-color:#050800;
+	cursor:pointer;
+}
+#history,#logout,#prev,#about
+{
+	color:white;
+	position:absolute;
+	top:50%;
+	cursor:pointer;
+}
+
+#history
+{
+	left:73%;
+}
+#logout
+{
+	left:95%;
+}
+#prev
+{
+	left:58%;
+}
+#about
+{
+	left:85%;
+}
+
+#tab
+{
+	position:absolute;
+	left:0%;
+	top:16%;
+}
+#search
+{
+	position:absolute;
+	left:160px;
+	top:0%;
+	cursor:pointer;
+}
+#CreateStation{
+
+	position:absolute;
+	left:275%;
+	top:0%;
+	width:500%;
+
+}
+#Accidents{
+
+	position:absolute;
+	left:510%;
+	top:0%;
+
+}
+a
+{
+	text-decoration:none;
+}
+#live,#search
+{
+	text-decoration:none;
+	cursor:pointer;
+}
+#map-canvas 
+{
+	position:absolute;
+    	height: 70%;
+	width:78%;
+	left:2%;
+	top:23%;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid;
+	-webkit-filter:blur(3px);
+	border-radius: 10px;
+}
+#date
+{
+	position:absolute;
+	left:81%;
+	top:30%;
+	width:2%;
+	display:none;
+}
+.black:link {
+    color: #000000;
+}
+
+/* visited link */
+.black:visited {
+    color: #000000;
+}
+
+/* mouse over link */
+.black:hover {
+    color: #000000;
+}
+
+/* selected link */
+.black:active {
+    color: #000000;
+}
+#white:link {
+    color: #ffffff;
+}
+
+/* visited link */
+#white:visited {
+    color: #ffffff;
+}
+
+/* mouse over link */
+#white:hover {
+    color: #ffffff;
+}
+
+/* selected link */
+#white:active {
+    color: #ffffff;
+}
+#newDev
+{
+	position:absolute;
+	left:25%;
+	top:0%;
+	width:500%;
+}
+#regUser
+{
+	position:relative;
+	left:140%;
+	top:0%;
+	width:500%;
+}
+#Live
+{
+	position:absolute;
+	left:410%;
+	top:0%;
+	width:100%;
+
+}
+#devlist
+{
+	position:absolute;
+	left:0%;
+	top:95%;
+}
+#load
+{
+	position:absolute;
+	left:30%;
+	top:45%;
+	width:20%;
+	height:30%;
+	z-index:-1;
+}
+
+#trackincidents
+{
+	position: relative;
+	left:464%;
+	top:-24px;
+
+}
+#accidentsDownload
+{
+
+	position:relative;
+	left:40%;
+	top:-10px;
+}
+#station
+{
+	position:absolute;	
+	left:475%;
+	top:91%;
+
+}

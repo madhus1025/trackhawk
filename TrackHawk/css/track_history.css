@@ -1,0 +1,16 @@
+#map-canvas 
+{
+	position:absolute;
+        height: 70%;
+	width:70%;
+	left:20%;
+	top:20%;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid;
+    border-radius: 10px;
+}
+#date
+{
+	display:none;
+}
