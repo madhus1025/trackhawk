@@ -1,9 +1,18 @@
 ﻿<?php
+
+
+
 function connector(){
-		$con=mysqli_connect("119.82.105.141","root1","root@123","hawk");
+
+session_start();
+$dbname = $_SESSION['dbname'];
+		$con=mysqli_connect("127.0.0.1","root","",$dbname);
 		return $con;
 }
 function connector_db(){
-		$con=mysqli_connect("119.82.105.141","root1","root@123");
+		$con=mysqli_connect("127.0.0.1","root","");
+		return $con;
 }
+
+header("../index.php");
 ?>

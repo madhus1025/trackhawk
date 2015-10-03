@@ -1,6 +1,19 @@
 <?php
 	session_start();
 	$_SESSION['login']=0;
+
+	$con=mysqli_connect("127.0.0.1","root","","master");
+	$tenant = $_SERVER['HTTP_HOST'];
+	echo $tenant;
+	$result = mysqli_query($con,"select * from tenants where tname = '$tenant'");
+		$row = mysqli_fetch_array($result);
+	
+		$_SESSION['dbname'] = $row['dbname'];
+		echo $_SESSION['dbname'];		
+		header('/internal_pages/setup.php');
+
+	
+
 ?>
 
 <html>

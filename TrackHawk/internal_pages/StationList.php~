@@ -9,9 +9,9 @@
 	
 	$result=mysqli_query($con,"select * from stations where district='$district'");
 
-	while($row=mysqli_fetch_array($result)){
-		
-		echo $row['stationName'].",";
-	}
+
+	if($result != null)	
+		while($row=mysqli_fetch_array($result))
+			echo $row['stationName'].",";
 	
 ?>

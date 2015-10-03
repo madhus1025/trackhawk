@@ -21,6 +21,7 @@
 			{
 				if (xmlhttp.readyState==4 && xmlhttp.status==200){
 
+
 					setstation(xmlhttp.responseText);
 				}
 
@@ -29,6 +30,8 @@
 		}
 		
 		function setstation(devices){
+
+				
 			var imeis = devices.split(',');	
 			var x=document.getElementById("stations");
 			x.remove(x.selectedIndex);
